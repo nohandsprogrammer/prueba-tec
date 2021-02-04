@@ -1,0 +1,18 @@
+.sidenav-container {
+    height: 95%;
+}
+
+.nav-bar {
+    height: 5%;
+}
+
+.some-space {
+    flex: 1 1 auto;
+}
+
+.linked-in-icon {
+    height: 32px;
+    width: 32px;
+    background-image: url('../../../assets/images/linkedin.png');
+    background-size: cover;
+}

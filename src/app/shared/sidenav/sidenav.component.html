@@ -1,0 +1,25 @@
+<mat-toolbar color="primary" class="nav-bar">
+  <button mat-icon-button (click)="isExpanded = !isExpanded">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1 class="p-l-15">Prueba técnica</h1>
+  <span class="some-space"></span>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <a href="https://www.linkedin.com/in/juan-landin-chazo/" target="_blank">
+      <div class="linked-in-icon"></div>
+    </a>
+  </button>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container" autosize>
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <mat-nav-list>
+      <mat-list-item *ngFor="let item of navInfo" routerLink={{item.url}}>
+        <span class="full-width p-l-10" *ngIf="isExpanded">{{item.name}}</span>
+        <mat-icon mat-list-icon>{{item.icon}}</mat-icon>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <router-outlet class="full-height"></router-outlet>
+
+</mat-sidenav-container>  
